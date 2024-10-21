@@ -8,10 +8,10 @@ function selectGender(participant) {
     let currentGender = genders[participant];
 
     if (currentGender === 'female') {
-        document.getElementById(`genderIcon${participant}`).src = 'male_icon.png';
+        document.getElementById(`genderIcon${participant}`).src = 'png/male.png';
         genders[participant] = 'male';
     } else {
-        document.getElementById(`genderIcon${participant}`).src = 'female_icon.png';
+        document.getElementById(`genderIcon${participant}`).src = 'png/female.png';
         genders[participant] = 'female';
     }
 }
