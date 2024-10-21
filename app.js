@@ -1,13 +1,17 @@
 let genders = {
-    1: 'female',
-    2: 'male'
+    1: 'female',  // Initially set Participant 1 as female
+    2: 'male'     // Initially set Participant 2 as male
+};
+
+// Set initial icons on page load
+window.onload = function() {
+    document.getElementById('genderIcon1').src = 'png/female.png';   // Participant 1 starts as female
+    document.getElementById('genderIcon2').src = 'png/male.png';     // Participant 2 starts as male
 };
 
 function selectGender(participant) {
     // Toggle gender between male and female
-    let currentGender = genders[participant];
-
-    if (currentGender === 'female') {
+    if (genders[participant] === 'female') {
         document.getElementById(`genderIcon${participant}`).src = 'png/male.png';
         genders[participant] = 'male';
     } else {

@@ -9,37 +9,46 @@
 <body>
 
 <div class="container">
-    <h1>Score Calculator</h1>
+    <h1>Kettlebell Dojo Kumite #7</h1>
+    <h2>Score Calculator</h2>
 
-    <div class="participant">
-        <div class="input-group">
-            <label for="reps1">Reps</label>
-            <input type="number" id="reps1" placeholder="Reps">
-        </div>
-        <div class="input-group">
-            <label for="weight1">Weight (kg)</label>
-            <input type="number" id="weight1" placeholder="Weight">
-        </div>
-        <div class="gender">
-            <button id="gender1" class="gender-icon" onclick="selectGender(1)">
-                <img src="png/female.png" alt="Female" id="genderIcon1">
-            </button>
+    <!-- Participant 1 Section -->
+    <div class="participant-section">
+        <h3>Participant 1</h3>
+        <div class="participant">
+            <div class="input-group">
+                <label for="reps1">Reps</label>
+                <input type="number" id="reps1" placeholder="Reps">
+            </div>
+            <div class="input-group">
+                <label for="weight1">Weight (kg)</label>
+                <input type="number" id="weight1" placeholder="Weight in kg">
+            </div>
+            <div class="gender">
+                <button id="gender1" class="gender-icon" onclick="selectGender(1)">
+                    <img src="male_icon.png" alt="Male" id="genderIcon1">
+                </button>
+            </div>
         </div>
     </div>
 
-    <div class="participant">
-        <div class="input-group">
-            <label for="reps2">Reps</label>
-            <input type="number" id="reps2" placeholder="Reps">
-        </div>
-        <div class="input-group">
-            <label for="weight2">Weight (kg)</label>
-            <input type="number" id="weight2" placeholder="Weight">
-        </div>
-        <div class="gender">
-            <button id="gender2" class="gender-icon" onclick="selectGender(2)">
-                <img src="png/male.png" alt="Male" id="genderIcon2">
-            </button>
+    <!-- Participant 2 Section -->
+    <div class="participant-section">
+        <h3>Participant 2</h3>
+        <div class="participant">
+            <div class="input-group">
+                <label for="reps2">Reps</label>
+                <input type="number" id="reps2" placeholder="Reps">
+            </div>
+            <div class="input-group">
+                <label for="weight2">Weight (kg)</label>
+                <input type="number" id="weight2" placeholder="Weight in kg">
+            </div>
+            <div class="gender">
+                <button id="gender2" class="gender-icon" onclick="selectGender(2)">
+                    <img src="female_icon.png" alt="Female" id="genderIcon2">
+                </button>
+            </div>
         </div>
     </div>
 

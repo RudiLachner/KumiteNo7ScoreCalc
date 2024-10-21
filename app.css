@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -16,11 +16,27 @@ h1 {
     color: #ff2e2e;
 }
 
+h2 {
+    color: #ff2e2e;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #ff2e2e;
+    margin-bottom: 10px;
+}
+
+.participant-section {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ff2e2e;
+}
+
 .participant {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
 }
 
 .input-group {
@@ -58,13 +74,13 @@ h1 {
 }
 
 .gender-icon img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     transition: transform 0.2s;
 }
 
 .gender-icon img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .button {
@@ -86,8 +102,4 @@ h1 {
     font-weight: bold;
     font-size: 20px;
     color: #ff2e2e;
-}
-.gender-icon img {
-    width: 50px;
-    height: 50px;
 }
