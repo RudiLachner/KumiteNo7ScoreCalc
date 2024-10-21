@@ -10,19 +10,27 @@ function calculateScore() {
         return;
     }
 
-    // Calculate the common reps and the extra reps
+    // Calculate common reps and additional reps
     let commonReps = Math.min(reps1, reps2);
-    let extraReps = Math.abs(reps1 - reps2);
-    let extraWeight = reps1 > reps2 ? weight1 : weight2;
+    let extraReps1 = reps1 > reps2 ? reps1 - reps2 : 0;
+    let extraReps2 = reps2 > reps1 ? reps2 - reps1 : 0;
 
-    // Calculate the score
-    let score = (commonReps * (weight1 + weight2)) + (extraReps * extraWeight);
+    // Calculate the score for common reps
+    let combinedWeight = weight1 + weight2;
+    let commonScore = 2 * commonReps * combinedWeight;
+
+    // Calculate the score for extra reps (if any)
+    let extraScore1 = extraReps1 * weight1;
+    let extraScore2 = extraReps2 * weight2;
+
+    // Total score
+    let totalScore = commonScore + extraScore1 + extraScore2;
 
     // Apply the Kettle-boy multiplier if both are Kettle-boys
     if (isKettleBoys) {
-        score *= 0.667;
+        totalScore *= 0.667;
     }
 
     // Display the result
-    document.getElementById('result').textContent = `Final Score: ${score.toFixed(2)}`;
+    document.getElementById('result').textContent = `Final Score: ${totalScore.toFixed(2)}`;
 }
