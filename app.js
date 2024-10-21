@@ -43,6 +43,11 @@ function calculateScore() {
     // Total score
     let totalScore = commonScore + extraScore1 + extraScore2;
 
+    // Check if both participants are male and apply the multiplier if true
+    if (genders[1] === 'male' && genders[2] === 'male') {
+        totalScore *= 0.667;
+    }
+
     // Display the result
     document.getElementById('result').textContent = `Final Score: ${totalScore.toFixed(2)}`;
 }
