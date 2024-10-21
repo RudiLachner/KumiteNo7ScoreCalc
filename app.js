@@ -1,9 +1,26 @@
+let genders = {
+    1: 'female',
+    2: 'male'
+};
+
+function selectGender(participant) {
+    // Toggle gender between male and female
+    let currentGender = genders[participant];
+
+    if (currentGender === 'female') {
+        document.getElementById(`genderIcon${participant}`).src = 'male_icon.png';
+        genders[participant] = 'male';
+    } else {
+        document.getElementById(`genderIcon${participant}`).src = 'female_icon.png';
+        genders[participant] = 'female';
+    }
+}
+
 function calculateScore() {
     let reps1 = parseInt(document.getElementById('reps1').value);
     let weight1 = parseInt(document.getElementById('weight1').value);
     let reps2 = parseInt(document.getElementById('reps2').value);
     let weight2 = parseInt(document.getElementById('weight2').value);
-    let isKettleBoys = document.getElementById('isKettleBoys').checked;
 
     if (isNaN(reps1) || isNaN(weight1) || isNaN(reps2) || isNaN(weight2)) {
         alert('Please enter valid numbers for all fields.');
@@ -25,11 +42,6 @@ function calculateScore() {
 
     // Total score
     let totalScore = commonScore + extraScore1 + extraScore2;
-
-    // Apply the Kettle-boy multiplier if both are Kettle-boys
-    if (isKettleBoys) {
-        totalScore *= 0.667;
-    }
 
     // Display the result
     document.getElementById('result').textContent = `Final Score: ${totalScore.toFixed(2)}`;
